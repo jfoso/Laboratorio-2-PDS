@@ -14,3 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import wfdb
 ```
+- scipy: Es una librería para computación científica. Es necesaria para funciones más avanzadas de procesamiento de señales.
+* matplotlib.pyplot as plt: Se utiliza para crear gráficos y visualizaciones.
+* numpy as np: Es la librería fundamental para computación numérica en Python. Se utiliza para trabajar con arreglos (arrays) y realizar operaciones matemáticas.
+* wfdb: Esta librería es para trabajar con datos de señales fisiológicas, como electrocardiogramas (ECG).
