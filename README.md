@@ -90,7 +90,7 @@ plt.show()
 * print(...): Imprime el resultado de la correlación.
 * Posterior a esto se realiza el grafico de la correlación.\
 Donde se obtuvo el siguiente resultado:
-![WhatsApp Image 2025-02-14 at 9 14 05 PM](https://github.com/user-attachments/assets/06ce935d-f35b-4fbd-b86b-bc4b03e4e92f)
+![image](https://github.com/user-attachments/assets/d89e1371-ddeb-4395-ad80-e58eb3700623)
 
 ## Adquisición y Análisis de Datos ECG
 Posterior a esto se descargará una señal de la base de datos physionet en este caso es una señal ECG para caracterizar la señal en función del tiempo calculando sus estadisticos utilizando la libreria numpy y realizando su respectivo grafico de la siguiente manera :
@@ -114,6 +114,13 @@ print("Varianza: ", np.var(signal))
 print("Desviación estándar: ", np.std(signal))
 print("Coeficiente de variación: ", np.std(signal) / np.mean(signal))
 ```
+![image](https://github.com/user-attachments/assets/e1d3360e-ec5a-4a63-8d1f-9c12fe86396c)
+Para los estadísticos de la señal obtuvimos que: 
+* Promedio: -8.39999999999998e-05
+* Varianza: 0.019397332944
+* Desviación estándar: 0.1392743082696877
+* Coeficiente de variación: -1658.027479401048
+
 ### Transformada de Fourier y Densidad Espectral de Potencia (PSD)
 Para culminar la práctica de laboratorio se aplicará la transformada de fourier de la señal y graficar tanto su densidad espectral, su transformada y calcular sus estadísticos descriptivos en función de la frecuencia de la siguiente manera:
 ```ruby
@@ -153,11 +160,19 @@ plt.xlabel("Magnitud")
 plt.ylabel("Frecuencia [Hz]")
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/28e485f2-0e3d-4c16-b56a-e40057be2cd7)
+![image](https://github.com/user-attachments/assets/cf860846-744e-4a19-bc4b-5f694c38e406)
+
 - t = np.linspace(0, 1, fs, endpoint=False): crea un vector de tiempo de un segundo de duración.
 * N = len(t): calcula la longitud del vector de tiempo, que también será la longitud de la transformada.
 * transfou = np.fft.fft(signal) / N: Calcula la Transformada de Fourier Discreta (DFT) de la señal ECG.
 * frec = np.fft.fftfreq(N, 1 / fs): Calcula las frecuencias correspondientes a la DFT.
 * magni = 2 * np.abs(transfou[:N // 2]): Calcula la magnitud del espectro de frecuencia, tomando solo la mitad positiva del espectro.
 * psd = (magni**2) / N: Calcula la densidad espectral de potencia (PSD), que representa la distribución de la potencia de la señal en función de la frecuencia.
+
+Para los datos estadísticos de la frecuencia obtuvimos que:
+* Promedio: 0.0002752
+* Desviación estándar: 0.0005354887113656084
+* Mediana: 0.00014000000000000001
 ## Resultados
 El análisis de las señales sintéticas demostró la capacidad de la correlación cruzada para medir la similitud entre señales. El análisis de la señal ECG real proporcionó información valiosa sobre sus características en el dominio del tiempo y la frecuencia.
