@@ -174,5 +174,7 @@ Para los datos estadísticos de la frecuencia obtuvimos que:
 * Promedio: 0.0002752
 * Desviación estándar: 0.0005354887113656084
 * Mediana: 0.00014000000000000001
+![image](https://github.com/user-attachments/assets/a56341ba-535c-4ea2-8786-fb245d3cdadb)
+
 ## Resultados
 El análisis de las señales sintéticas demostró la capacidad de la correlación cruzada para medir la similitud entre señales. El análisis de la señal ECG real proporcionó información valiosa sobre sus características en el dominio del tiempo y la frecuencia.
